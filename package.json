@@ -1,0 +1,13 @@
+{
+  "name": "colorschemegenerator",
+  "version": "1.0.0",
+  "description": "Color Scheme Generator",
+  "main": "index.html",
+  "scripts": {},
+  "author": "Dominik Weber",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

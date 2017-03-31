@@ -1,0 +1,11 @@
+﻿.start-color-row, .mixed-color-row, .neutral-color-row, .white-black-mixed-neutral-colors {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+    .start-color-row div, .mixed-color-row div, .neutral-color-row div, .white-black-mixed-neutral-colors div {
+        flex-grow: 1;
+    }

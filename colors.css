@@ -1,0 +1,65 @@
+.start-main-color {
+  background-color: #00aaff; }
+
+.start-complementary-color {
+  background-color: #ff5500; }
+
+.mixed-main-color {
+  background-color: #3b96c4; }
+
+.mixed-complementary-color {
+  background-color: #d66329; }
+
+.main-color-normal-neutral {
+  background-color: #4d90b2; }
+
+.main-color-dark-neutral {
+  background-color: #274859; }
+
+.main-color-light-neutral {
+  background-color: #a6c8d9; }
+
+.complementary-color-normal-neutral {
+  background-color: #c06a3f; }
+
+.complementary-color-dark-neutral {
+  background-color: #603520; }
+
+.complementary-color-light-neutral {
+  background-color: #e0b59f; }
+
+.main-color-normal-neutral-black {
+  background-color: #4582a0; }
+
+.main-color-dark-neutral-black {
+  background-color: #234150; }
+
+.main-color-light-neutral-black {
+  background-color: #95b4c3; }
+
+.complementary-color-normal-neutral-black {
+  background-color: #ad5f39; }
+
+.complementary-color-dark-neutral-black {
+  background-color: #56301c; }
+
+.complementary-color-light-neutral-black {
+  background-color: #c9a28f; }
+
+.main-color-normal-neutral-white {
+  background-color: #71a6c1; }
+
+.main-color-dark-neutral-white {
+  background-color: #3c5a6a; }
+
+.main-color-light-neutral-white {
+  background-color: #c1d8e4; }
+
+.complementary-color-normal-neutral-white {
+  background-color: #cd8865; }
+
+.complementary-color-dark-neutral-white {
+  background-color: #704936; }
+
+.complementary-color-light-neutral-white {
+  background-color: #e9cbbc; }

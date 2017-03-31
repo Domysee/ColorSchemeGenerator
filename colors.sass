@@ -1,0 +1,133 @@
+﻿$main-color: hsl(200, 100%, 50%)
+$complement-color: adjust-hue($main-color, 180deg)
+
+.start-main-color
+  background-color: $main-color
+
+.start-complementary-color
+  background-color: $complement-color
+
+@function is-cool-color($color)
+  @return hue($color) < 300 and hue($color) > 120
+
+@function is-high-key-value($color)
+  @return hue($color) > 30 and hue($color) < 140
+
+@function harmonious-mix($mix, $base)
+  @if is-cool-color($mix)
+    @if is-high-key-value($base)
+      @return mix($mix, $base, 11%)
+    @else
+      @return mix($mix, $base, 16%)
+  @else
+    @if is-high-key-value($base)
+      @return mix($mix, $base, 13%)
+    @else
+      @return mix($mix, $base, 23%)
+
+$main-color-similar-lighting: harmonious-mix($complement-color, $main-color)
+$complement-color-similar-lighting: harmonious-mix($main-color, $complement-color)
+
+.mixed-main-color
+  background-color: $main-color-similar-lighting
+
+.mixed-complementary-color
+  background-color: $complement-color-similar-lighting
+
+@function mix-neutral($color)
+  @if is-highest-key-value($color)
+    @if is-high-key-value(complement($color))
+      @return mix(complement($color), $color, 19%)
+    @else
+      @return mix(complement($color), $color, 13%)
+  @else if is-high-key-value($color)
+    @if is-high-key-value(complement($color))
+      @return mix(complement($color), $color, 31%)
+    @else
+      @return mix(complement($color), $color, 23%)
+  @else
+    @if is-highest-key-value(complement($color))
+      @return mix(complement($color), $color, 31%)
+
+    @if is-high-key-value(complement($color))
+      @return mix(complement($color), $color, 26%)
+    @else
+      @return mix(complement($color), $color, 23%)
+
+$main-color-neutral-1: mix-neutral($main-color-similar-lighting)
+$main-color-neutral-2: darken($main-color-neutral-1, 25%)
+$main-color-neutral-3: lighten($main-color-neutral-1, 25%)
+
+$complement-color-neutral-1: mix-neutral($complement-color-similar-lighting)
+$complement-color-neutral-2: darken($complement-color-neutral-1, 25%)
+$complement-color-neutral-3: lighten($complement-color-neutral-1, 25%)
+
+.main-color-normal-neutral
+  background-color: $main-color-neutral-1
+
+.main-color-dark-neutral
+  background-color: $main-color-neutral-2
+
+.main-color-light-neutral
+  background-color: $main-color-neutral-3
+
+.complementary-color-normal-neutral
+  background-color: $complement-color-neutral-1
+
+.complementary-color-dark-neutral
+  background-color: $complement-color-neutral-2
+
+.complementary-color-light-neutral
+  background-color: $complement-color-neutral-3
+
+$main-color-neutral-1-black: mix(hsl(0, 0%, 0%), $main-color-neutral-1, 10%)
+$main-color-neutral-2-black: mix(hsl(0, 0%, 0%), $main-color-neutral-2, 10%)
+$main-color-neutral-3-black: mix(hsl(0, 0%, 0%), $main-color-neutral-3, 10%)
+
+$complement-color-neutral-1-black: mix(hsl(0, 0%, 0%), $complement-color-neutral-1, 10%)
+$complement-color-neutral-2-black: mix(hsl(0, 0%, 0%), $complement-color-neutral-2, 10%)
+$complement-color-neutral-3-black: mix(hsl(0, 0%, 0%), $complement-color-neutral-3, 10%)
+
+$main-color-neutral-1-white: mix(hsl(360, 100%, 100%), $main-color-neutral-1, 20%)
+$main-color-neutral-2-white: mix(hsl(360, 100%, 100%), $main-color-neutral-2, 10%)
+$main-color-neutral-3-white: mix(hsl(360, 100%, 100%), $main-color-neutral-3, 30%)
+
+$complement-color-neutral-1-white: mix(hsl(360, 100%, 100%), $complement-color-neutral-1, 20%)
+$complement-color-neutral-2-white: mix(hsl(360, 100%, 100%), $complement-color-neutral-2, 10%)
+$complement-color-neutral-3-white: mix(hsl(360, 100%, 100%), $complement-color-neutral-3, 30%)
+
+.main-color-normal-neutral-black
+  background-color: $main-color-neutral-1-black
+
+.main-color-dark-neutral-black
+  background-color: $main-color-neutral-2-black
+
+.main-color-light-neutral-black
+  background-color: $main-color-neutral-3-black
+
+.complementary-color-normal-neutral-black
+  background-color: $complement-color-neutral-1-black
+
+.complementary-color-dark-neutral-black
+  background-color: $complement-color-neutral-2-black
+
+.complementary-color-light-neutral-black
+  background-color: $complement-color-neutral-3-black
+
+.main-color-normal-neutral-white
+  background-color: $main-color-neutral-1-white
+
+.main-color-dark-neutral-white
+  background-color: $main-color-neutral-2-white
+
+.main-color-light-neutral-white
+  background-color: $main-color-neutral-3-white
+
+.complementary-color-normal-neutral-white
+  background-color: $complement-color-neutral-1-white
+
+.complementary-color-dark-neutral-white
+  background-color: $complement-color-neutral-2-white
+
+.complementary-color-light-neutral-white
+  background-color: $complement-color-neutral-3-white
