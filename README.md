@@ -2,7 +2,7 @@
 
 This project automates the process outlined in the article above and generates HTML and CSS files that, together, show a page like this:
 
-![Color Scheme](http://domysee.com/blogposts/15/GoalColorSchemeLayout.png)
+![Color Scheme](readme_images/GoalColorSchemeLayout.png)
 
 ## How to use
 
@@ -31,7 +31,7 @@ gulp compile-sass:watch
 It boots up a local server and automatically opens the page in you default browser. If it does not, it is available under [http://localhost:3000/](http://localhost:3000/).  
 The task watches all changes to `colors.sass`, and immediately updates the page when something changd. This is the resulting behavior:
 
-![Automatic Color Scheme Updates](http://domysee.com/blogposts/15/ColorSchmeChangeAnimation.gif)
+![Automatic Color Scheme Updates](readme_images/ColorSchmeChangeAnimation.gif)
 
 ### I don't like immediate Changes
 
